@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Report</title>
+</head>
+<style>
+    body{
+	    background-color:rgb(232, 247, 125)
+    }
+    h2{
+        color:rgb(114, 8, 8);
+    }
+    form{
+        text-align: center;
+        font-size:larger;
+    }
+    fieldset{
+  border: 4px solid rgb(15, 15, 15);
+  float: center;
+}
+</style>
+<body>
+    <form action="" method="POST">
+        {%csrf_token%}
+        <fieldset style="width:1480px">
+        <legend><U><h2>FEEDBACK REPORT</h2></U></legend>
+        <b>Username <input type="text" name="name"></b><br>
+        <br>
+		<b>URL Link<input type="text" name="url" ></b><br>
+		<br>
+        <label for="url_type"><b>Type:</b></label>
+            <select id="url_type" name="url_type">
+                <option hidden disabled selected value>select</option>
+                <option value="Phishing">Phishing</option>
+                <option value="Legitimate">Legitimate</option>
+            </select>
+        <input type="submit" value="Submit"><br>
+
+        </fieldset></form>
+</body>
+</html>
